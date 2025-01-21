@@ -339,7 +339,7 @@ header nav > div.on .underline {
   .conMain-scrollDown {
     gap: 4px;
     display: flex;
-    bottom: 1%;
+    bottom: 6%;
   }
   .conMain-scrollDown p {
     font-size: 20px;
@@ -524,9 +524,8 @@ header nav > div.on .underline {
 }
 @media (max-width: 640px) {
   .conMain-centerBox {
-    top: 55%;
     height: 79%;
-    top: 56%;
+    top: 52%;
   }
   .conMain-products2 img {
     width: 130px;
@@ -624,6 +623,9 @@ header nav > div.on .underline {
   }
 }
 @media (max-width: 640px) {
+  .conMain-centerBox2 {
+    top: 48%;
+  }
   .conMain-products3 {
     width: 300px;
   }
@@ -1410,12 +1412,13 @@ transform: translate(-50%, -50%);
     /* height: 165vw; */
     height: 84vh;
     top: auto;
-    bottom: 44px;
+    bottom: 60px;
     transform: translate(0, 0);
     /* background-color: blue; */
   }
   .conFlavor-title {
     font-size: 24px;
+    top: 7%;
   }
   .conFlavor .conFlavor-description {
     top: auto;
