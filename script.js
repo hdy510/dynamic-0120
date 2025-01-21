@@ -1006,6 +1006,9 @@ document.addEventListener("DOMContentLoaded", () => {
           swiper.slideTo(0, 1000, true);
           // 첫 슬라이드 애니메이션 작동
           activateFirstSlide();
+
+          // swiper autoplay 켜기
+          swiper.autoplay.start();
           break;
         case 1: // 두 번째 메뉴 (DYNAMIC II)
           dynamic1Page.classList.remove("on");
@@ -1020,6 +1023,9 @@ document.addEventListener("DOMContentLoaded", () => {
             { opacity: 0, y: 20 },
             { opacity: 1, y: 0, delay: 0.2, duration: 0.6 }
           )
+
+          // swiper autoplay 끄기
+          swiper.autoplay.stop();
           break;
         case 2: // 세 번째 메뉴 (DYNAMIC III)
           dynamic1Page.classList.remove("on");
@@ -1034,6 +1040,8 @@ document.addEventListener("DOMContentLoaded", () => {
             { opacity: 0, y: 20 },
             { opacity: 1, y: 0, delay: 0.2, duration: 0.6 }
           )
+          // swiper autoplay 끄기
+          swiper.autoplay.stop();
           break;
       }
     });
