@@ -484,7 +484,13 @@ gsap.killTweensOf([
   ".conQuality-bg.blue",
   ".conQuality-text3",
   ".conQuality-text4",
-  ".conQuality-text4 .detail span"
+  ".conQuality-text4 .detail span",
+  ".conQuality-text4-1",
+  ".conQuality-text4-1 .world",
+  ".conQuality-text4-1 .songni",
+  ".conQuality-text4-1 .max1",
+  ".conQuality-text4-1 .max2",
+  ".conQuality-text4-1 .maxBox.index1 p"
 ]);
 
 // 초기 상태 강제 설정
@@ -496,12 +502,19 @@ gsap.set(".conQuality-text3 .detail .underline", { width: 0 });
 gsap.set(".conQuality-text3", { top: "50%", opacity: 1 });
 gsap.set(".conQuality-text4", { opacity: 0, left: 0 });
 gsap.set(".conQuality-text4 .detail span", { opacity: 0 });
+gsap.set(".conQuality-text4-1", { y: "400px", opacity: 0 });
+gsap.set(".conQuality-text4-1 .world", { y: "20px", opacity: 1 });
+gsap.set(".conQuality-text4-1 .songni", { y: "20px", opacity: 1 });
+gsap.set(".conQuality-text4-1 .max1", { y: "20px", opacity: 0 });
+gsap.set(".conQuality-text4-1 .max2", { y: "20px", opacity: 0 });
+gsap.set(".conQuality-text4-1 .maxBox.index0 p", { y: "20px", opacity: 0 });
+gsap.set(".conQuality-text4-1 .maxBox.index1 p", { y: "20px", opacity: 0 });
 
 // 애니메이션 실행
 const animationTop = mediaQueryMobile.matches
-? "-90%"
+? "-60%"
 : mediaQueryTablet.matches
-? "-20%"
+? "-40%"
 : "-10%";
 const animationLeft = mediaQueryMobile.matches
 ? "0"
@@ -518,6 +531,11 @@ const animationTop3 = mediaQueryMobile.matches
 : mediaQueryTablet.matches
 ? "0"
 : "0";
+const animationY = mediaQueryMobile.matches
+? "100px"
+: mediaQueryTablet.matches
+? "200px"
+: "400px";
 
 gsap.timeline()
   .fromTo("header h1 .black",
@@ -544,26 +562,55 @@ gsap.timeline()
     { top: "50%" },
     { top: animationTop, duration: 0.4 }
   , "<180%")
-  .fromTo('.conQuality-text4', 
-    { top: "70%", opacity: 0 },
-    { top: animationTop2, opacity: 1, duration: 0.4 }
+  // .fromTo('.conQuality-text4', 
+  //   { top: "70%", opacity: 0 },
+  //   { top: animationTop2, opacity: 1, duration: 0.4 }
+  // , "<")
+  // .fromTo('.conQuality-text3', 
+  //   { opacity: 1 },
+  //   { opacity: 0, duration: 0.4 }
+  // , "<30%")
+  // .fromTo('.conQuality-text4', 
+  //   { left: 0 },
+  //   { left: animationLeft, duration: 0.4 }
+  // )
+  // .fromTo('.conQuality-text4 .imgBox', 
+  //   { y: "0" },
+  //   { y: animationTop3, duration: 0.4 }
+  // , "<")
+  // .fromTo('.conQuality-text4 .detail span',
+  //   { opacity: 0 },
+  //   { stagger: { each: 0.06 }, opacity: 1, duration: 0.4 }
+  // , "<50%");
+  .fromTo('.conQuality-text4-1', 
+    { y: animationY, opacity: 0 },
+    { y: "0px", opacity: 1, duration: 0.4 }
   , "<")
-  .fromTo('.conQuality-text3', 
-    { opacity: 1 },
-    { opacity: 0, duration: 0.4 }
+  .fromTo('.conQuality-text4-1 .world', 
+    { y: "20px", opacity: 1 },
+    { y: "0", opacity: 0, duration: 0.4 }
+  , "<150%")
+  .fromTo('.conQuality-text4-1 .songni', 
+    { y: "20px", opacity: 1 },
+    { y: "0", opacity: 0, duration: 0.4 }
   , "<30%")
-  .fromTo('.conQuality-text4', 
-    { left: 0 },
-    { left: animationLeft, duration: 0.4 }
-  )
-  .fromTo('.conQuality-text4 .imgBox', 
-    { y: "0" },
-    { y: animationTop3, duration: 0.4 }
-  , "<")
-  .fromTo('.conQuality-text4 .detail span',
-    { opacity: 0 },
-    { stagger: { each: 0.06 }, opacity: 1, duration: 0.4 }
-  , "<50%");
+  .fromTo('.conQuality-text4-1 .max1', 
+    { y: "20px", opacity: 0 },
+    { y: "0", opacity: 1, duration: 0.4 }
+  , "<100%")
+  .fromTo('.conQuality-text4-1 .max2', 
+    { y: "20px", opacity: 0 },
+    { y: "0", opacity: 1, duration: 0.4 }
+  , "<30%")
+  .fromTo('.conQuality-text4-1 .maxBox.index0 p', 
+    { y: "20px", opacity: 0 },
+    { y: "0", opacity: 1, duration: 0.4 }
+  , "<100%")
+  .fromTo('.conQuality-text4-1 .maxBox.index1 p', 
+    { y: "20px", opacity: 0 },
+    { y: "0", opacity: 1, duration: 0.4 }
+  , "<30%")
+
 };
 
 // 7번 슬라이드 애니메이션 설정 함수

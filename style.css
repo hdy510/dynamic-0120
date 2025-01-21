@@ -1047,6 +1047,60 @@ margin: 0.5vw 0;
 .conQuality-text4 .detail span:nth-child(16) {
 margin-right: 0.8vw;
 }
+.conQuality-text4-1 {
+  width: 60vw;
+  height: 10vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conQuality-text4-1 .world {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 15vw;
+}
+.conQuality-text4-1 .cross {
+  width: 3vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.conQuality-text4-1 .songni {
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  transform: translate(50%, -50%);
+  width: 15vw;
+}
+.conQuality-text4-1 .maxBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 1vw;
+}
+.conQuality-text4-1 .maxBox.index0 {
+  left: 10%;
+}
+.conQuality-text4-1 .maxBox.index1 {
+  right: 10%;
+}
+.conQuality-text4-1 .maxBox img {
+  width: 14vw;
+}
+.conQuality-text4-1 .maxBox p {
+  font-size: 2vw;
+  font-family: var(--font-family-pretendard-bold);
+}
+
+
 @media (max-width: 1280px) {
   .conQuality-text4 {
     width: 100%;
@@ -1061,6 +1115,34 @@ margin-right: 0.8vw;
   .conQuality-text4 .detail span {
     font-size: 6vw;
   }
+  .conQuality-text4-1 .maxBox {
+    gap: 2vw;
+  }
+  .conQuality-text4-1 .world {
+    width: 23vw;
+    top: 35%;
+    left: 10%;
+  }
+  .conQuality-text4-1 .cross {
+    width: 3vw;
+  }
+  .conQuality-text4-1 .songni {
+    width: 23vw;
+    top: 35%;
+    right: 10%;
+  }
+  .conQuality-text4-1 .maxBox.index0 {
+    left: -10%;
+  }
+  .conQuality-text4-1 .maxBox.index1 {
+    right: -10%;
+  }
+  .conQuality-text4-1 .maxBox img {
+    width: 24vw;
+  }
+  .conQuality-text4-1 .maxBox p {
+    font-size: 3vw;
+  }
 }
 @media (max-width: 640px) {
   .conQuality-text4 .detail {
@@ -1070,6 +1152,12 @@ margin-right: 0.8vw;
   }
   .conQuality-text4 .detail span {
     font-size: 8.4vw;
+  }
+  .conQuality-text4-1 .world {
+    top: 10%;
+  }
+  .conQuality-text4-1 .songni {
+    top: 10%;
   }
 }
 
