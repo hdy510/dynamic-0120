@@ -1413,7 +1413,7 @@ transform: translate(-50%, -50%);
     /* height: 165vw; */
     height: 84vh;
     top: auto;
-    bottom: 70px;
+    top: 80px;
     transform: translate(0, 0);
     /* background-color: blue; */
   }
@@ -1422,9 +1422,8 @@ transform: translate(-50%, -50%);
     top: 7%;
   }
   .conFlavor .conFlavor-description {
-    top: auto;
     height: auto;
-    bottom: 0;
+    top: 45%;
     width: 80%;
   }
   .conFlavor-description .list h3 {
@@ -1613,8 +1612,8 @@ transform: translate(-50%, -50%);
   }
   .conFlavor .conFlavor-imgs .swiper-slide img {
     transform: scale(1);
-    height: 300px;
-    /* background-color: yellow; */
+    /* height: 300px; */
+    height: 30vh;
   }
   .conFlavor .conFlavor-imgs .swiper-slide-active .gradientBox {
     bottom: 0;
@@ -1811,7 +1810,7 @@ transform: translate(-50%, -50%);
     bottom: 10%;
   }
   .conAboutUs footer {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .conAboutUs footer p {
     font-size: 12px;
@@ -1838,6 +1837,12 @@ transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.5;
     word-break: keep-all;
+  }
+  .conAboutUs .topBtn {
+    bottom: 13%;
+  }
+  .conAboutUs footer {
+    margin-bottom: 60px;
   }
 }
 
