@@ -339,7 +339,6 @@ header nav > div.on .underline {
   .conMain-scrollDown {
     gap: 4px;
     display: flex;
-    bottom: 6%;
   }
   .conMain-scrollDown p {
     font-size: 20px;
@@ -362,20 +361,22 @@ header nav > div.on .underline {
 @media (max-width: 640px) {
   .conMain-products {
     width: 120px;
+    top: 50%;
   }
   .conMain-text p {
     font-size: 20vw;
   }
   .conMain-text.beMore {
-    top: 20%;
+    top: 16%;
     width: 89vw;
   }
   .conMain-text.dynamic {
-    bottom: 12%;
+    bottom: 16%;
     width: 89vw;
   }
   .conMain-scrollDown {
     gap: 10px;
+    bottom: 8%;
   }
   .conMain-scrollDown p {
     font-size: 20px;
@@ -1412,7 +1413,7 @@ transform: translate(-50%, -50%);
     /* height: 165vw; */
     height: 84vh;
     top: auto;
-    bottom: 60px;
+    bottom: 70px;
     transform: translate(0, 0);
     /* background-color: blue; */
   }
@@ -1807,7 +1808,10 @@ transform: translate(-50%, -50%);
     width: 48px;
     height: 48px;
     right: 3%;
-    bottom: 3%;
+    bottom: 10%;
+  }
+  .conAboutUs footer {
+    margin-bottom: 50px;
   }
   .conAboutUs footer p {
     font-size: 12px;
