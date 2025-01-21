@@ -1120,7 +1120,7 @@ margin-right: 0.8vw;
   }
   .conQuality-text4-1 .world {
     width: 23vw;
-    top: 35%;
+    top: 20%;
     left: 10%;
   }
   .conQuality-text4-1 .cross {
@@ -1128,7 +1128,7 @@ margin-right: 0.8vw;
   }
   .conQuality-text4-1 .songni {
     width: 23vw;
-    top: 35%;
+    top: 20%;
     right: 10%;
   }
   .conQuality-text4-1 .maxBox.index0 {
@@ -1154,10 +1154,10 @@ margin-right: 0.8vw;
     font-size: 8.4vw;
   }
   .conQuality-text4-1 .world {
-    top: 10%;
+    top: 0%;
   }
   .conQuality-text4-1 .songni {
-    top: 10%;
+    top: 0%;
   }
 }
 

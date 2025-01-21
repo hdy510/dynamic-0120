@@ -9,7 +9,9 @@ const swiper = new Swiper('.view.swiper', {
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
+    stopOnLastSlide: true
   },
+  loop: false,
   mousewheel: {
     enabled: false, // 초기에는 Swiper 스크롤 비활성화
   },
@@ -490,6 +492,7 @@ gsap.killTweensOf([
   ".conQuality-text4-1 .songni",
   ".conQuality-text4-1 .max1",
   ".conQuality-text4-1 .max2",
+  ".conQuality-text4-1 .maxBox.index0 p",
   ".conQuality-text4-1 .maxBox.index1 p"
 ]);
 
@@ -512,10 +515,10 @@ gsap.set(".conQuality-text4-1 .maxBox.index1 p", { y: "20px", opacity: 0 });
 
 // 애니메이션 실행
 const animationTop = mediaQueryMobile.matches
-? "-60%"
+? "-16vw"
 : mediaQueryTablet.matches
-? "-40%"
-: "-10%";
+? "-10vw"
+: "-3vw";
 const animationLeft = mediaQueryMobile.matches
 ? "0"
 : mediaQueryTablet.matches
@@ -532,10 +535,10 @@ const animationTop3 = mediaQueryMobile.matches
 ? "0"
 : "0";
 const animationY = mediaQueryMobile.matches
-? "100px"
+? "330%"
 : mediaQueryTablet.matches
-? "200px"
-: "400px";
+? "220%"
+: "150%";
 
 gsap.timeline()
   .fromTo("header h1 .black",
