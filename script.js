@@ -6,11 +6,11 @@ const mediaQueryMobile = window.matchMedia("(max-width: 640px)");
 // 전체 페이지 슬라이드 Swiper 설정
 const swiper = new Swiper('.view.swiper', {
   direction: 'vertical',
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-    stopOnLastSlide: true
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  //   stopOnLastSlide: true
+  // },
   loop: false,
   mousewheel: {
     enabled: false, // 초기에는 Swiper 스크롤 비활성화
@@ -323,13 +323,13 @@ gsap.timeline()
     { opacity: 1, scale: 1, duration: 2, ease: "power3.out" }
   , "<")
   .fromTo(
-    ".conMain-text4-2",
+    ".conMain-text5",
     { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0.1 },
+    { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0 },
     "<"
   )
   .fromTo(
-    ".conMain-text5",
+    ".conMain-text4-2",
     { opacity: 0, y: 50 },
     { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0.2 },
     "<"
