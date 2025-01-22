@@ -6,11 +6,11 @@ const mediaQueryMobile = window.matchMedia("(max-width: 640px)");
 // 전체 페이지 슬라이드 Swiper 설정
 const swiper = new Swiper('.view.swiper', {
   direction: 'vertical',
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  //   stopOnLastSlide: true
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    stopOnLastSlide: true
+  },
   loop: false,
   mousewheel: {
     enabled: false, // 초기에는 Swiper 스크롤 비활성화
