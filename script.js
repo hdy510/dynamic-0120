@@ -6,11 +6,11 @@ const mediaQueryMobile = window.matchMedia("(max-width: 640px)");
 // 전체 페이지 슬라이드 Swiper 설정
 const swiper = new Swiper('.view.swiper', {
   direction: 'vertical',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-    stopOnLastSlide: true
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  //   stopOnLastSlide: true
+  // },
   loop: false,
   mousewheel: {
     enabled: false, // 초기에는 Swiper 스크롤 비활성화
@@ -118,6 +118,7 @@ const activateFirstSlide = () => {
   gsap.set(".header h1 .black", { opacity: 0 });
   gsap.set(".header h1 .white", { opacity: 1 });
   gsap.set(".header nav div", { color: "#ffffff" });
+  gsap.set(".conMain-ellipseBox", { backgroundColor: "#ffffff" });
 
   // 애니메이션 실행
   const animationScale = mediaQueryMobile.matches
@@ -139,10 +140,22 @@ const activateFirstSlide = () => {
     : "8vw";
   
   const ellipseBoxScaleY = mediaQueryMobile.matches
-    ? 180
+    ? 240
     : mediaQueryTablet.matches
     ? 140
     : 100;
+
+  const ellipseBlink1 = mediaQueryMobile.matches
+    ? "#F81884"
+    : mediaQueryTablet.matches
+    ? "#ffffff"
+    : "#ffffff";
+  
+  const ellipseBlinkDuration = mediaQueryMobile.matches
+  ? 0.3
+  : mediaQueryTablet.matches
+  ? 0.6
+  : 0.6;
 
   gsap.timeline({
     onComplete: () => {
@@ -169,14 +182,14 @@ const activateFirstSlide = () => {
     )
     .fromTo(
       ".conMain-ellipseBox",
-      { rotate: -15, backgroundColor: "#ffffff", borderRadius: "50%" },
+      { rotate: -15, backgroundColor: ellipseBlink1, borderRadius: "50%" },
       { rotate: -35, backgroundColor: "#F81884", borderRadius: 0, duration: 0.6, ease: "power3.inOut" },
       "<50%"
     )
     .fromTo(
       ".conMain-ellipseBox",
-      { rotate: -35, backgroundColor: "#ffffff", borderRadius: "50%" },
-      { scaleY: ellipseBoxScaleY, rotate: 35, backgroundColor: "#F81884", borderRadius: 0, duration: 0.6, ease: "power3.inOut" },
+      { rotate: -35, backgroundColor: ellipseBlink1, borderRadius: "50%" },
+      { scaleY: ellipseBoxScaleY, rotate: 35, backgroundColor: "#F81884", borderRadius: 0, duration: ellipseBlinkDuration, ease: "power3.inOut" },
       "<50%"
     )
     .fromTo(
@@ -323,13 +336,13 @@ gsap.timeline()
     { opacity: 1, scale: 1, duration: 2, ease: "power3.out" }
   , "<")
   .fromTo(
-    ".conMain-text5",
+    ".conMain-text4-2",
     { opacity: 0, y: 50 },
     { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0 },
     "<"
   )
   .fromTo(
-    ".conMain-text4-2",
+    ".conMain-text5",
     { opacity: 0, y: 50 },
     { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0.2 },
     "<"

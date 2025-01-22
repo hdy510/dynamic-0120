@@ -625,7 +625,7 @@ header nav > div.on .underline {
 }
 @media (max-width: 640px) {
   .conMain-centerBox2 {
-    top: 58%;
+    top: 48%;
   }
   .conMain-products3 {
     width: 300px;
@@ -658,7 +658,7 @@ header nav > div.on .underline {
   .conMain-text4-2 {
     visibility: visible;
     opacity: 1;
-    bottom: 100%;
+    bottom: 90%;
   }
 }
 
@@ -750,7 +750,10 @@ header nav > div.on .underline {
 }
 @media (max-width: 640px) {
   .conMain-text5 {
-    bottom: 160%;
+    top: 90%;
+  }
+  .conMain-text6  {
+    top: 140%;
   }
 }
 
